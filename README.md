@@ -34,8 +34,17 @@ git-gud-workshop/
 │   ├── 2encapsulation.py
 │   ├── 3inheritance.py
 │   └── 4polymorphism.py
-├── exercises/                     # Practice tasks for each module
-├── CONTRIBUTORS.md                # You'll add your name here in Module 4
+├── arena/                            # Interactive Python arena (puzzles, tasks & testcases)
+│   ├── basics/                       # Variables, I/O, conditionals, loops & boss challenge
+│   ├── intermediate/                 # Collections, lambdas, handlers, OOP & boss challenge
+│   ├── advanced/                     # NumPy, Pandas, Matplotlib, Scikit-learn & ML app boss
+│   ├── miscellaneous/                # Algos, data structures, CP problems, ciphers, chatbot
+│   └── assets/                       # Datasets, synthetic tests & dataset generator
+├── SOLUTIONS/                        # Participant solution directories (<username>_solutions/)
+├── my_dir_setup.py                   # Setup script to initialize your personal solutions space
+├── CONTRIBUTORS.md                   # You'll add your name here in Module 4
+├── CODE_OF_CONDUCT.md                # Be cool, have fun, don't panic
+├── LICENSE                           # The "Have Fun & Don't Break Things" license
 └── README.md
 ```
 
@@ -78,6 +87,9 @@ git-gud-workshop/
 | 7 | Inheritance and Polymorphism | Reuse code across classes and let different objects share one interface |
 
 ## Setup
+
+> 📖 **Detailed Setup Documentation:**
+> If you need a comprehensive, step-by-step walkthrough with screenshots and common troubleshooting, check out our [Workshop Setup Documentation (Google Docs)](https://docs.google.com/document/d/1nDuZn9sbfjJ4TPC2o8TRZJtEoPRuj-0ULh0H-9mH49g/edit?tab=t.abytm8ncm7d4#heading=h.66mk3vnumgty).
 
 ### 1. Create a GitHub account
 
@@ -151,6 +163,32 @@ cd git-gud-workshop
 ```
 
 Replace `<your-username>` with your GitHub username. You'll do this properly in Module 2, but having it ready means you can follow along from the start.
+
+## The Python Arena (Puzzles, Tasks & Boss Battles)
+
+Once you're comfortable with Git and ready to put your Python skills to the test, jump into the **`arena/`**!
+
+The arena is divided into 5 specialized divisions packed with coding puzzles, intentional bugs with hints, real datasets, and testcases:
+- **`basics/`**: Variables, operations, input/output typecasting, conditionals, loops, and a multi-operator Calculator Boss (`boss.py`).
+- **`intermediate/`**: List, tuple, dict, and set operations, math helpers (`fibonacci`, `factorial`, `is_prime`), lambdas, file handlers (txt, csv, json, sqlite), OOP classes, inheritance, and a Student Management System Boss (`boss.py`).
+- **`advanced/`**: NumPy arrays & linear algebra, Pandas data manipulation & feature engineering, Matplotlib visualizations, Scikit-learn pipelines, and an interactive Tkinter Machine Learning App Boss (`boss.py`).
+- **`miscellaneous/`**: Classic algorithms (binary search, two-pointer), core data structures (stacks, queues, linked lists), competitive programming challenges (two-sum, Kadane's max subarray), substitution ciphers (Caesar, Vigenère), terminal chatbot simulation, and lightweight Flask routing.
+- **`assets/`**: Ready-to-use CSV/JSON datasets (sales, weather, attendance, student records) and generator scripts.
+
+### ⚔️ How to Participate in the Arena:
+
+1. **Initialize your personal solutions folder:**
+   Run the setup script from the repository root:
+   ```bash
+   python my_dir_setup.py
+   ```
+   This automatically detects your GitHub username from your git remote origin and creates `SOLUTIONS/<your-username>_solutions/` with a clean copy of all the arena challenges.
+
+2. **Solve the challenges:**
+   Open the files inside `SOLUTIONS/<your-username>_solutions/`, follow the comments and hints, fix the bugs, and run the scripts to test your solutions.
+
+3. **Submit your work:**
+   Commit your changes to a new branch and open a Pull Request back to the main repository!
 
 ## How to Run
 
