@@ -142,8 +142,3 @@ look at their README files, issues, and contribution guidelines. you'll start ge
 that's it for the introduction! the next guide will help you get hands-on with git commands and start tracking your own changes.
 
 happy coding, fys! 💜
-
-
-that's it for the introduction! the next guide will help you get hands-on with git commands and start tracking your own changes.
-
-**happy coding, fys! 💜**
