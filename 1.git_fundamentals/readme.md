@@ -1,233 +1,149 @@
 # hey fys! 👋 welcome to git gud
 
 welcome to git, where you can break your code, track exactly what you broke, and occasionally blame your past self for it.
-ever wondered how developers work on the same project without sending 84 versions of `final_final_REAL_final.cpp` on whatsapp? let's find out.
+
+ever wondered how developers work on the same project without sending 84 versions of `final_final_REAL_final.cpp` on whatsapp? or how people from different parts of the world contribute to the same project?
+
+let's find out.
 
 **no prior git experience needed. just bring your laptop and your curiosity.**
 
 ---
 
-## 1. git vs. github
+## 1. what is version control?
 
-they're not the same thing!
+imagine you're working on a project. you make a few changes, something breaks, and suddenly you wish you could go back to the version that actually worked.
+that's where **version control** comes in.
+version control keeps track of changes made to your files, allowing you to revisit earlier versions, see what changed, and recover previous work when needed.
+it also makes collaboration easier by helping multiple developers work on the same project without constantly sharing files back and forth.
+think of it as a save system for your code, except you can revisit your old saves.
 
-- **git** tracks changes in your code and lets you revisit older versions.
-- **github** is a website where you can store repositories online and collaborate with others.
+## 2. git vs. github
 
-think of git as your save system and github as your online hub.
+they're related, but they're not the same thing!
+
+- **git** is a version control system that tracks changes to your files and maintains their history.
+- **github** is an online platform where you can host git repositories, share your work, and collaborate with other developers.
+
+in simple terms, git helps you manage changes to your code, while github gives you a place to share and work on projects online.
 
 ### what's a repository?
 
-a repository (or *repo*) is a project that git tracks. your website, C++ assignment, or random python script can all have their own repositories.
-a repository can live on your laptop, on github, or in both places.
-
+a repository (or *repo*) is a project that git tracks, including its files and their history.
+your C++ assignment, personal website, or random python script can all have their own repositories.
+you'll come across repositories quite often while working with git and github, so it's worth getting familiar with the term!
 ---
 
-## 2. local vs. remote repositories
+## 3. open source vs. closed source
 
-**local repository:** the version of your project on your computer.
-**remote repository:** the version hosted online, usually on github.
+you'll hear these terms a lot when exploring projects on github.
 
-they don't automatically sync. when you upload your commits, you *push* them. when you bring changes from the remote repository into your local one, you can *pull* them.
-think of local as your workspace and remote as the online copy you can share with others.
+### open source
 
----
+open-source software makes its source code available for others to inspect, use, and often modify or redistribute, depending on its licence.
+developers can contribute improvements, fix bugs, report issues, and learn from how the project is built.
 
-## 3. fork vs. clone
+**examples:** [Linux](https://github.com/torvalds/linux), [VS Code](https://github.com/microsoft/vscode), and [CPython](https://github.com/python/cpython).
 
-found a cool project on github and want to work with it? that's where forking and cloning come in.
-- **fork:** creates your own copy of someone else's repository on github.
-- **clone:** downloads a repository onto your computer.
+### closed source
 
-### how to fork
+closed-source software does not make its source code publicly available for people to freely inspect and modify. its use and distribution are controlled by the owner or organisation.
 
-1. open a repository on github.
-2. click **fork**.
-3. choose your account if prompted, then create the fork.
+**examples:** Microsoft Windows and Adobe Photoshop.
 
-### how to clone
+### what's the difference?
 
-1. open the repository on github.
-2. click **code**, select **HTTPS**, and copy the URL.
-3. run this command in your terminal, replacing the example URL with the actual one:
-
-```bash
-git clone https://github.com/username/first-project.git
-```
-
-then enter the downloaded folder:
-
-```bash
-cd first-project
-```
-
-### fork vs. clone: what's the difference?
-
-| | fork | clone |
+| | open source | closed source |
 |---|---|---|
-| **where?** | github | your computer |
-| **what does it do?** | creates your own online copy | downloads a repository locally |
+| **source code** | available under the project's licence | generally not publicly available |
+| **modifications** | permitted according to the licence | restricted by the owner |
+| **contributions** | community contributions may be accepted | development is generally controlled by the owner |
+| **examples** | Linux, CPython | Adobe Photoshop, proprietary Windows components |
 
-you can fork **and** clone: fork a project on github, then clone your fork onto your computer.
-
-**remember:** cloning someone's repository doesn't automatically give you permission to push changes to it.
-
----
-
-## 4. `git init`
-
-got a project folder you want git to track? open a terminal inside it and run:
-
-```bash
-git init
-```
-
-git creates a hidden `.git` directory to store the information it needs to track your project.
-**remember:** this creates a local repository. it doesn't create a github repository or upload anything.
-
-### try it out
-
-1. create a folder called `git-gud-practice`.
-2. open a terminal inside it.
-3. run `git init`.
-
-that's it! your folder is now a git repository.
+**one important thing:** open source doesn't automatically mean free of cost, and code being publicly visible doesn't automatically make it open source. the licence determines what people are allowed to do with it.
 
 ---
 
-## 5. `git status`: your git detective
+## 4. how do developers collaborate?
 
-forgot what you've changed? run:
+imagine you're building a website with three other people. one person works on the homepage, another handles the login page, and someone else fixes bugs.
 
-```bash
-git status
-```
+how do you keep everyone's work organised?
 
-it shows you which files are new, which have been modified, and which changes are staged.
+that's where version control and platforms like github help.
 
-### try it out
+- **track changes:** see what was changed and when.
+- **work together:** manage contributions from multiple developers.
+- **review code:** check changes before they're added to a project.
+- **recover earlier work:** revisit previous versions when something goes wrong.
 
-inside your repository, create a file called `hello.cpp`:
+github also provides features like issues and pull requests to help teams discuss problems, propose changes, and review contributions.
 
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "hello, git gud!";
-    return 0;
-}
-```
-
-save it, then run:
-
-```bash
-git status
-```
-
-your file should appear as **untracked**. git can see it, but you haven't staged it yet.
-**pro tip:** when you're confused about what's happening in git, start with `git status`.
+these tools are useful for college projects, internships, hackathons, and open-source contributions.
 
 ---
 
-## 6. `git add`: the VIP list
+## 5. what is open-source contribution?
 
-before changes can be included in a commit, you need to **stage** them. think of staging as choosing what goes into your next snapshot.
+open source isn't just about using someone else's code. you can contribute to projects, too!
 
-to stage one file:
+contributions can include:
 
-```bash
-git add hello.cpp
-```
+- fixing bugs or adding features
+- improving documentation
+- reporting bugs and suggesting improvements
+- writing tests
+- helping other users resolve issues
 
-to stage multiple files:
+you don't have to build an entire project from scratch or be an expert to get started. documentation fixes and beginner-friendly issues are valid ways to contribute.
 
-```bash
-git add hello.cpp README.md
-```
+### where does github come in?
 
-to stage eligible changes under the current directory:
+a typical contribution might look something like this:
 
-```bash
-git add .
-```
+1. find an open-source project you're interested in.
+2. explore its code and read its contribution guidelines.
+3. make a change you'd like to contribute.
+4. submit a **pull request**, asking the maintainers to review your changes.
+5. discuss feedback and make improvements if needed.
 
-check what happened:
+the project maintainers decide whether to accept the contribution.
 
-```bash
-git status
-```
-
-your file should now appear under **changes to be committed**.
-
-### try it out
-
-1. run `git status` and find `hello.cpp`.
-2. run `git add hello.cpp`.
-3. run `git status` again. notice what's changed!
+and yes, this is something you can start exploring even as a first-year student!
 
 ---
 
-## 7. `git commit`: save your progress
+## 6. a few terms you'll hear often
 
-staging changes doesn't save a snapshot in your repository. for that, you need a **commit**.
-think of it like saving a checkpoint in a game. if you make more changes later, you can still look back at earlier commits.
-
-run:
-
-```bash
-git commit -m "add hello.cpp"
-```
-
-the `-m` lets you add a short message describing what the commit contains.
-
-### try it out
-
-after staging `hello.cpp` with `git add`, run the commit command above.
-
-then check:
-
-```bash
-git status
-```
-
-if everything is committed, you should see that your working tree is clean.
-
-### remember the difference
-
-| command | what it does |
+| term | what it means |
 |---|---|
-| editing a file | changes your working copy |
-| `git add` | stages selected changes |
-| `git commit` | saves a snapshot locally |
-| `git push` | uploads commits to a remote repository |
+| **repository (repo)** | a project and its tracked history |
+| **commit** | a recorded snapshot of selected changes |
+| **branch** | a separate line of development |
+| **merge** | combining changes from different lines of development |
+| **pull request (PR)** | a proposal to review and incorporate changes |
+| **issue** | a place to report bugs, suggest features, or discuss tasks |
+
+you don't need to memorise everything right now. you'll understand these terms better as you start using git and github.
 
 ---
 
-## 8. quick cheat sheet
+## 7. explore github!
 
-| command/action | what it does |
-|---|---|
-| `git init` | initializes a local repository |
-| `git status` | shows the state of your repository |
-| `git add <file>` | stages changes to a file |
-| `git add .` | stages eligible changes under the current directory |
-| `git commit -m "message"` | saves a snapshot with a message |
-| `git clone <url>` | downloads a repository to your computer |
-| **fork button on github** | creates your own online copy |
-| `git push` | uploads commits to a remote repository |
-| `git pull` | brings remote changes into your local repository |
-| `cd <folder>` | moves into a folder in the terminal |
+here are a few projects worth checking out. you don't need to understand all their code — just explore their repositories and see how real projects are organised.
 
----
+- [Linux](https://github.com/torvalds/linux) — the Linux kernel.
+- [VS Code](https://github.com/microsoft/vscode) — the source code for Visual Studio Code.
+- [CPython](https://github.com/python/cpython) — the reference implementation of Python.
+- [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) — a platform for learning programming.
 
-## 9. useful resources
+look at their README files, issues, and contribution guidelines. you'll start getting a feel for how open-source projects work.
 
-- [git documentation](https://git-scm.com/doc)
-- [github repository docs](https://docs.github.com/en/repositories)
+that's it for the introduction! the next guide will help you get hands-on with git commands and start tracking your own changes.
 
----
+happy coding, fys! 💜
 
-every developer has googled a git command at some point. you don't need to memorize everything today. keep experimenting, ask for help when you're stuck, and you'll get the hang of it.
+
+that's it for the introduction! the next guide will help you get hands-on with git commands and start tracking your own changes.
 
 **happy coding, fys! 💜**
