@@ -1,41 +1,24 @@
 # hey fys! 👋 welcome to git gud
 
-welcome to git, where you can break your code, track exactly what you broke, and occasionally blame your past self for it.
-ever wondered how developers work on the same project without sending 84 versions of `final_final_REAL_final.cpp` on whatsapp? let's find out.
-
-**no prior git experience needed. just bring your laptop and your curiosity.**
+now that you know the difference between git and github (if not, check out the git_fundamentals readme first), let's get into the actual guide and learn how to use them!
 
 ---
 
-## 1. git vs. github
+## 1. local vs. remote repositories
 
-they're not the same thing!
+a **local repository** is the version of your project on your computer.
+a **remote repository** is a version hosted online, usually on github.
 
-- **git** tracks changes in your code and lets you revisit older versions.
-- **github** is a website where you can store repositories online and collaborate with others.
+they don't automatically stay in sync. when you upload your commits, you *push* them. when you bring changes from the remote repository into your local one, you can *pull* them.
 
-think of git as your save system and github as your online hub.
-
-### what's a repository?
-
-a repository (or *repo*) is a project that git tracks. your website, C++ assignment, or random python script can all have their own repositories.
-a repository can live on your laptop, on github, or in both places.
-
----
-
-## 2. local vs. remote repositories
-
-**local repository:** the version of your project on your computer.
-**remote repository:** the version hosted online, usually on github.
-
-they don't automatically sync. when you upload your commits, you *push* them. when you bring changes from the remote repository into your local one, you can *pull* them.
 think of local as your workspace and remote as the online copy you can share with others.
 
 ---
 
-## 3. fork vs. clone
+## 2. fork vs. clone
 
 found a cool project on github and want to work with it? that's where forking and cloning come in.
+
 - **fork:** creates your own copy of someone else's repository on github.
 - **clone:** downloads a repository onto your computer.
 
@@ -74,7 +57,7 @@ you can fork **and** clone: fork a project on github, then clone your fork onto 
 
 ---
 
-## 4. `git init`
+## 3. `git init`
 
 got a project folder you want git to track? open a terminal inside it and run:
 
@@ -83,6 +66,7 @@ git init
 ```
 
 git creates a hidden `.git` directory to store the information it needs to track your project.
+
 **remember:** this creates a local repository. it doesn't create a github repository or upload anything.
 
 ### try it out
@@ -95,7 +79,7 @@ that's it! your folder is now a git repository.
 
 ---
 
-## 5. `git status`: your git detective
+## 4. `git status`: your git detective
 
 forgot what you've changed? run:
 
@@ -126,13 +110,14 @@ git status
 ```
 
 your file should appear as **untracked**. git can see it, but you haven't staged it yet.
+
 **pro tip:** when you're confused about what's happening in git, start with `git status`.
 
 ---
 
-## 6. `git add`: the VIP list
+## 5. staging and `git add`
 
-before changes can be included in a commit, you need to **stage** them. think of staging as choosing what goes into your next snapshot.
+before changes can be included in a commit, you need to **stage** them. think of staging as selecting which changes you want to include in your next snapshot.
 
 to stage one file:
 
@@ -164,70 +149,17 @@ your file should now appear under **changes to be committed**.
 
 1. run `git status` and find `hello.cpp`.
 2. run `git add hello.cpp`.
-3. run `git status` again. notice what's changed!
+3. run `git status` again and notice what's changed!
+
+**remember:** staging doesn't create a commit. it just prepares your selected changes for one.
 
 ---
 
-## 7. `git commit`: save your progress
-
-staging changes doesn't save a snapshot in your repository. for that, you need a **commit**.
-think of it like saving a checkpoint in a game. if you make more changes later, you can still look back at earlier commits.
-
-run:
-
-```bash
-git commit -m "add hello.cpp"
-```
-
-the `-m` lets you add a short message describing what the commit contains.
-
-### try it out
-
-after staging `hello.cpp` with `git add`, run the commit command above.
-
-then check:
-
-```bash
-git status
-```
-
-if everything is committed, you should see that your working tree is clean.
-
-### remember the difference
-
-| command | what it does |
-|---|---|
-| editing a file | changes your working copy |
-| `git add` | stages selected changes |
-| `git commit` | saves a snapshot locally |
-| `git push` | uploads commits to a remote repository |
-
----
-
-## 8. quick cheat sheet
-
-| command/action | what it does |
-|---|---|
-| `git init` | initializes a local repository |
-| `git status` | shows the state of your repository |
-| `git add <file>` | stages changes to a file |
-| `git add .` | stages eligible changes under the current directory |
-| `git commit -m "message"` | saves a snapshot with a message |
-| `git clone <url>` | downloads a repository to your computer |
-| **fork button on github** | creates your own online copy |
-| `git push` | uploads commits to a remote repository |
-| `git pull` | brings remote changes into your local repository |
-| `cd <folder>` | moves into a folder in the terminal |
-
----
-
-## 9. useful resources
+## useful resources
 
 - [git documentation](https://git-scm.com/doc)
 - [github repository docs](https://docs.github.com/en/repositories)
 
----
-
-every developer has googled a git command at some point. you don't need to memorize everything today. keep experimenting, ask for help when you're stuck, and you'll get the hang of it.
+you don't need to memorize everything today. keep experimenting, and don't hesitate to ask your seniors for help if you're stuck.
 
 **happy coding, fys! 💜**
