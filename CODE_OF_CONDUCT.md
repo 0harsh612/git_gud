@@ -35,6 +35,8 @@ If you've been banging your head against a puzzle in the `arena` for 20 minutes:
 2. Drink some water / grab some chai.
 3. Pet a dog or look outside.
 4. Come back with fresh eyes (90% of the time, the typo jumps right out at you).
+hello
+
 
 ### Rule 5: Keep the Community Clean & Safe
 - No harassment, hate speech, trolling, or creepiness of any kind.
