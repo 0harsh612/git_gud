@@ -1,4 +1,4 @@
-# The "Chill Out & Have Fun" Code of Conduct
+# The Code of Conduct
 
 Welcome to the **Git Gud Workshop**! 🚀
 
